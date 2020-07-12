@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 9, 2019, 10:57:20 AM
+    Author     : BaiYu
+*/
+
+label{
+    font-size: 16px !important;
+}
+
+.a-upload {
+    padding: 4px 10px;
+    width: 350px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #444;
+    background: #fafafa;
+    background-repeat: repeat-x;    
+    border: 1px solid #bbb;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.a-upload:hover {
+    color:  #000000;
+    background: #eaf2ff;
+    border: 1px solid #b7d2ff;
+    text-decoration: none
+} 
