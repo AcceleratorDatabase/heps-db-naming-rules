@@ -427,7 +427,7 @@
                     <div class="con"  >
                         <div style="position:absolute;width: 200px;left: 300px">
                             <label for="system">所属系统：</label>   
-                            <input class="easyui-combobox" id="system" name="system" data-options="valueField:'value',textField:'text',url:'LoadSystemServlet',multiple:true, panelHeight:'auto'" style="width: 100px; height: 25px" >
+                            <input class="easyui-combobox" id="system" name="system" data-options="valueField:'value',textField:'text',url:'LoadSystemServlet',method:'post',multiple:true, panelHeight:'auto'" style="width: 100px; height: 25px" >
                         </div>
                         <div style="position:absolute;width: 200px;left:500px" >
                             <label for="subsystem">主体分区：</label>
@@ -482,7 +482,6 @@
                     <a id="btn_remove" href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroy()">删除</a>
                         <!--<a href="#" class="easyui-linkbutton" iconCls="icon-print" plain="true" onclick="getSelected()">打印单行设备名字</a>-->
                         <!--<a href="#" class="easyui-linkbutton" iconCls="icon-print" plain="true" onclick="getSelections()">打印多行设备名字</a>-->
-
                         <a href="#" class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="exportPart()">导出指定项</a>
                         <a href="#" class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="exportAll()">导出查询项</a>
                 </div>

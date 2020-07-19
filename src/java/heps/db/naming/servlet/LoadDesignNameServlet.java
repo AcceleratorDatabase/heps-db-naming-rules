@@ -57,17 +57,7 @@ public class LoadDesignNameServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html; charset=UTF-8");
-        
-        PrintWriter out = response.getWriter();
-        DesignAPI d = new DesignAPI();
-        d.init();
-        String re = d.queryAllDesignNames();
-        out.print(re.replace(" ", ""));
-        
-
+        processRequest(request, response);
     } 
 
     /** 
@@ -80,7 +70,15 @@ public class LoadDesignNameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        doGet(request, response);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
+        
+        PrintWriter out = response.getWriter();
+        DesignAPI d = new DesignAPI();
+        d.init();
+        String re = d.queryAllDesignNames();
+        out.print(re.replace(" ", ""));
     }
 
     /** 

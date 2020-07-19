@@ -58,18 +58,6 @@ public class SetChineseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
-        
-        DesignAPI a = new DesignAPI();
-        a.init();
-        String chinName=(String)(request.getParameter("queryName"));       
-        String result=a.queryAllChineseName(chinName);
-        //System.out.println(result); 
-        PrintWriter out = response.getWriter();
-        out.print(result); 
-        a.destory();
         processRequest(request, response);
     }
 
@@ -84,7 +72,19 @@ public class SetChineseServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        
+        DesignAPI a = new DesignAPI();
+        a.init();
+        String chinName=(String)(request.getParameter("queryName"));       
+        String result=a.queryAllChineseName(chinName);
+        //System.out.println(result); 
+        PrintWriter out = response.getWriter();
+        out.print(result); 
+        a.destory();
+        processRequest(request, response);
     }
 
     /**

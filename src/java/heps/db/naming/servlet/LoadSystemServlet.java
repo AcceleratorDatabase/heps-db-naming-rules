@@ -58,6 +58,19 @@ public class LoadSystemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+        processRequest(request, response);
+    } 
+
+    /** 
+     * Handles the HTTP <code>POST</code> method.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
@@ -78,19 +91,6 @@ public class LoadSystemServlet extends HttpServlet {
         }
         jsonArray.add("{\"value\":\"" + "none" + "\"," + "\"text\":\"" + "none" + "\"}");
         out.print(jsonArray);
-    } 
-
-    /** 
-     * Handles the HTTP <code>POST</code> method.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        doGet(request, response);
     }
 
     /** 

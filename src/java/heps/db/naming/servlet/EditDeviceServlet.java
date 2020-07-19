@@ -58,14 +58,6 @@ public class EditDeviceServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        Integer dslId = Integer.parseInt(request.getParameter("dslId"));
-        String devData = request.getParameter("devData");
-        JSONObject devjson = JSONObject.fromObject(devData);
-        request.getSession().setAttribute("dslId", dslId);
-        request.getSession().setAttribute("devData", devjson.toString());
-        request.getRequestDispatcher("editdevice.jsp").forward(request, response);
         processRequest(request, response);
     }
 
@@ -80,7 +72,15 @@ public class EditDeviceServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        Integer dslId = Integer.parseInt(request.getParameter("dslId"));
+        String devData = request.getParameter("devData");
+        JSONObject devjson = JSONObject.fromObject(devData);
+        request.getSession().setAttribute("dslId", dslId);
+        request.getSession().setAttribute("devData", devjson.toString());
+        request.getRequestDispatcher("editdevice.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /**

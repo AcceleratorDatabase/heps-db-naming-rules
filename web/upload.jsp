@@ -91,7 +91,7 @@
                     </div>
                 </form>
             </div>
-                <div id="chooseSystemWindow" class="easyui-dialog" title="系统代号" style="width:300px; height:400px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
+                <div id="chooseSystemWindow" class="easyui-dialog" title="系统代号" style="width:300px; height:400px;padding:10px;font-size:14px;text-align: center" data-options="iconCls:'icon-more',closed: true,resizable:true">
                     <table id="tableChooseSys" name="tableChooseSys" class="easyui-datagrid" title="查询结果" align="center"
                        data-options="
                        singleSelect: true,
@@ -106,7 +106,7 @@
                         </thead>  
                     </table>
                     <div style="margin:5px 0;"></div>
-                    <a href="#" class="easyui-linkbutton" onclick="return setSystem();" style="position: absolute;left: 150px" data-options="iconCls:'icon-save'">保存</a>
+                    <a href="#" class="easyui-linkbutton" onclick="return setSystem();" data-options="iconCls:'icon-save'">保存</a>
                 </div>  
                 <div id="chooseChineseWindow" class="easyui-dialog" title="设备中文名称" style="width:800px; height:600px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">                        
                         <table id="tableChooseChin" name="tableChooseChin" class="easyui-datagrid" title="查询结果" align="center"
@@ -127,7 +127,7 @@
                     <div style="margin:5px 0;"></div>
                     <!--<a href="#" class="easyui-linkbutton" onclick="setChinese()" style="position: absolute;left: 400px" data-options="iconCls:'icon-save'">保存</a>-->                     
                 </div>
-                <div id="chooseEnglishWindow" class="easyui-dialog" title="设备英文名称" style="width:800px; height:400px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">                        
+                <div id="chooseEnglishWindow" class="easyui-dialog" title="设备英文名称" style="width:800px; height:400px;padding:10px;font-size:14px;text-align: center" data-options="iconCls:'icon-more',closed: true,resizable:true">                        
                         <table id="tableChooseEng" name="tableChooseEng" class="easyui-datagrid" title="查询结果" align="center"
                             data-options="
                             singleSelect: true,
@@ -143,9 +143,9 @@
                             </thead>  
                         </table>
                     <div style="margin:5px 0;"></div>
-                    <a href="#" class="easyui-linkbutton" onclick="return setEnglish();" style="position: absolute;left: 400px" data-options="iconCls:'icon-save'">保存</a>                     
+                    <a href="#" class="easyui-linkbutton" onclick="return setEnglish();" data-options="iconCls:'icon-save'">保存</a>                     
                 </div>
-                <div id="chooseDeviceWindow" class="easyui-dialog" title="设备名称代号" style="width:800px; height:400px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">                        
+                <div id="chooseDeviceWindow" class="easyui-dialog" title="设备名称代号" style="width:800px; height:400px;padding:10px;font-size:14px;text-align: center" data-options="iconCls:'icon-more',closed: true,resizable:true">                        
                         <table id="tableChooseDev" name="tableChooseDev" class="easyui-datagrid" title="查询结果" align="center"
                             data-options="
                             singleSelect: true,
@@ -161,9 +161,9 @@
                             </thead>  
                         </table>
                     <div style="margin:5px 0;"></div>
-                    <a href="#" class="easyui-linkbutton" onclick="return setDevice();" style="position: absolute;left: 400px" data-options="iconCls:'icon-save'">保存</a>                     
+                    <a href="#" class="easyui-linkbutton" onclick="return setDevice();" data-options="iconCls:'icon-save'">保存</a>                     
                 </div>
-                <div id="chooseSubsystemWindow" class="easyui-dialog" title="设备主体分区" style="width:600px; height:300px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
+                <div id="chooseSubsystemWindow" class="easyui-dialog" title="设备主体分区" style="width:500px; height:300px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
                     <div style=""> <label style="color:#800080;font-weight: bolder;">主体分区：</label>
                         <input type="radio" name="mainpart" id="acc" value="acc" onclick="return showaccdiv();" checked="checked" /><label style="color:#800080;font-weight: bolder;" for="acc">加速器</label> 
                         <input type="radio" name="mainpart" id="bl" value="bl" onclick="return showbldiv();" /><label style="color:#800080;font-weight: bolder;" for="bl">线站</label>
@@ -189,10 +189,11 @@
                     <div name="otherdiv" id="otherdiv" style="padding-top:10px">
                         <input id="otherpart" name="otherpart" class="easyui-textbox" labelWidth="150" label="建筑单体中文名：" labelPosition="before" labelAlign="left" style="width:400px">
                     </div>
-                    <div style="margin:5px 0;"></div>
-                    <a href="#" class="easyui-linkbutton" onclick="return setMainPart();" style="position: absolute;left: 200px" data-options="iconCls:'icon-save'">保存</a> 
+                    <div style="padding-top:5px;padding-left: 205px;">
+                    <a href="#" class="easyui-linkbutton" onclick="return setMainPart();" data-options="iconCls:'icon-save'">保存</a> 
+                    </div>
                 </div>
-                <div id="chooseLocationWindow" class="easyui-dialog" title="设备位置信息" style="width:600px; height:300px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
+                <div id="chooseLocationWindow" class="easyui-dialog" title="设备位置信息" style="width:500px; height:300px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
                     <div style="padding-left: 5px;"> <label style="color:#800080;font-weight: bolder;">位置信息：</label>
                         <input type="radio" name="locationpart" id="acclocation" value="acclocation" onclick="return showacclocation();" checked="checked" /><label style="color:#800080;font-weight: bolder;" for="acclocation">加速器</label> 
                         <input type="radio" name="locationpart" id="bllocation" value="bllocation" onclick="return showbllocation();" /><label style="color:#800080;font-weight: bolder;" for="bllocation">线站</label>
@@ -220,10 +221,11 @@
                     <div name="otherlocationdiv" id="otherlocationdiv" style="padding-top:10px;padding-left: 15px;">
                         <input id="other1" name="other1" class="easyui-textbox" labelWidth="150" label="建筑单体中文名：" labelPosition="before" labelAlign="left" style="width:400px">
                     </div>
-                    <div style="margin:5px 0;"></div>
-                    <a href="#" class="easyui-linkbutton" onclick="return setLocation();" style="position: absolute;left: 200px" data-options="iconCls:'icon-save'">保存</a> 
+                    <div style="padding-top:5px;padding-left: 205px;">
+                    <a href="#" class="easyui-linkbutton" onclick="return setLocation();" data-options="iconCls:'icon-save'">保存</a> 
+                    </div>
                 </div>
-                <div id="chooseJudgeWindow" class="easyui-dialog" title="设备顺序信息" style="width:400px; height:150px;padding:10px;font-size:14px;" data-options="iconCls:'icon-more',closed: true,resizable:true">
+                <div id="chooseJudgeWindow" class="easyui-dialog" title="设备顺序信息" style="width:400px; height:150px;padding:10px;font-size:14px;text-align: center" data-options="iconCls:'icon-more',closed: true,resizable:true">
                     <div style="padding-left: 5px;"> <label style="font-weight: bolder;">一个周期单元内的最大台套数>9：</label>
                         <input type="radio" name="judgepart" id="yes" value="Yes"/><label style="color:#800080;font-weight: bolder;" for="yes">Yes</label> 
                         <input type="radio" name="judgepart" id="no" value="No" /><label style="color:#800080;font-weight: bolder;" for="no">No</label>
