@@ -258,13 +258,13 @@
                 for(var i=0; i<newSenumber.length; i++){
                     ss.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+" "+'</span>');
                     var reamrkMag = row.remark;
-                    if(reamrkMag.toString().search('H')!==-1){
+                    if(reamrkMag.toString().search('H')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                         ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'H'+" "+'</span>');
                     }
-                    if(reamrkMag.toString().search('V')!==-1){
+                    if(reamrkMag.toString().search('V')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                         ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'V'+" "+'</span>');
                     }
-                    if(reamrkMag.toString().search('S')!==-1){
+                    if(reamrkMag.toString().search('S')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                         ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'S'+" "+'</span>');
                     }
                 }
@@ -343,13 +343,13 @@
                     for(var i=0; i<newSenumber.length; i++){
                         ss.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+" "+'</span>');
                         var reamrkMag = row.remark;
-                        if(reamrkMag.toString().search('H')!==-1){
+                        if(reamrkMag.toString().search('H')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                             ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'H'+" "+'</span>');
                         }
-                        if(reamrkMag.toString().search('V')!==-1){
+                        if(reamrkMag.toString().search('V')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                             ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'V'+" "+'</span>');
                         }
-                        if(reamrkMag.toString().search('S')!==-1){
+                        if(reamrkMag.toString().search('S')!==-1 && reamrkMag.toString().search('磁铁名')!==-1){
                             ssM.push('<span>'+mainpart+locanumber+dename+newSenumber[i]+'S'+" "+'</span>');
                         }
                     }
